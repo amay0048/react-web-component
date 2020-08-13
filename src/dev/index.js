@@ -69,6 +69,7 @@ module.exports = {
             link.type = 'text/css';
             link.href = path;
             link.media = 'all';
+            shadowRoot.appendChild(link);
           });
 
           shadowRoot.appendChild(mountPoint);
