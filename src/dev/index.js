@@ -1,7 +1,7 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 const retargetEvents = require('react-shadow-dom-retarget-events');
-const getStyleElementsFromReactWebComponentStyleLoader = require('./getStyleElementsFromReactWebComponentStyleLoader');
+// const getStyleElementsFromReactWebComponentStyleLoader = require('./getStyleElementsFromReactWebComponentStyleLoader');
 const camelCasedAttribute = require('./camelCasedAttribute');
 const extractAttributes = require('./extractAttributes');
 
@@ -58,10 +58,10 @@ module.exports = {
 
           // Move all of the styles assigned to the react component inside of the shadowRoot.
           // By default this is not used, only if the library is explicitly installed
-          const styles = getStyleElementsFromReactWebComponentStyleLoader();
-          styles.forEach((style) => {
-            shadowRoot.appendChild(style.cloneNode(shadowRoot));
-          });
+          // const styles = getStyleElementsFromReactWebComponentStyleLoader();
+          // styles.forEach((style) => {
+          //   shadowRoot.appendChild(style.cloneNode(shadowRoot));
+          // });
 
           stylePaths.forEach((path) => {
             const link = document.createElement('link');
